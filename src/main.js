@@ -15,6 +15,13 @@ window.addEventListener("resize", () => {
     effect.handleParticles(ctx);
 });
 
+// clear canvas button
+const clearBtn = document.getElementById("clearBtn");
+clearBtn.addEventListener("click", () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    effect.particles.length = 0;
+});
+
 class Particle {
     constructor(effect) {
         this.effect = effect;
